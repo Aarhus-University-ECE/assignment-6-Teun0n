@@ -3,8 +3,13 @@
 
 int max(int* numbers, int size)
 {
-    // Excercise 2
-    // Implement your code below...
+    int i;
+    int maximum=0;
 
-    return -1;
+    for(i=0;i<size;i++){
+        if(numbers[i]>=maximum)
+        maximum=numbers[i];
+    }
+
+    return maximum;
 }
