@@ -21,17 +21,26 @@ void add(node *head, int x){
   p->next = element; 
 }
 
-int size(node *l){
-    // Excercise 3b)
-    // Add your code here... 
 
-    return -1;
+
+int size(node *l){
+// Excercise 3b) 
+node *p=1;
+int i=0;
+while(p->next=NULL){
+p = p->next;
+i++;
 }
+return i;
+}
+
+
 
 void printout(node *l) {
   /*Excercise 3d) Implement your changes.. 
     pre: head points to the first, empty element. The last element's next is NULL
     post: the values of the list are printed out*/
+
     node *p = l->next;
     while (p!=NULL){
       printf("%d, ",p->data);
