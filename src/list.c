@@ -25,7 +25,7 @@ void add(node *head, int x){
 
 int size(node *l){
 // Excercise 3b) 
-node *p=1;
+node *p = 1;
 int i=0;
 while(p->next=NULL){
 p = p->next;
@@ -44,6 +44,7 @@ void printout(node *l) {
     node *p = l->next;
     while (p!=NULL){
       printf("%d, ",p->data);
+      p=p->next;
     }
     printf("\n");
 }
