@@ -56,11 +56,14 @@ int largest(node *l){
       post: returns the largest value of the list*/
       node *p =l->next;
       int largest= p->data;
-      for(int i;p->next=NULL;i++){
+      for(int i;p->next!=NULL;i++)
+      {
+
       if(largest<p->data)
       {
         largest=p->data;
       }
+
       p = p->next;
 }
     return largest; 
