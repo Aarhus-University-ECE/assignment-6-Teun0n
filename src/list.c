@@ -25,14 +25,17 @@ void add(node *head, int x){
 
 int size(node *l){
 // Excercise 3b) 
-node *p = l;
-int i=0;
-while(p->next!=NULL){
+//pre: points to the first, empty element. The last element's next is NULL.
+//post: returns number of counter variable equal to elements in list.
+node *p = l; //node struct is defined to input of function.
+int i=0;//counter variable is written, and defined as zero.
+while(p->next!=NULL) //while loop runs until input node is NULL.
+{
 
-p = p->next;
-i++;
+p = p->next; //next node is defined and ready to be checked
+i++; //counter adds 1 every loop
 }
-return i;
+return i;//number of elements is returned.
 }
 
 
@@ -42,29 +45,29 @@ void printout(node *l) {//done
     pre: head points to the first, empty element. The last element's next is NULL
     post: the values of the list are printed out*/
 
-    node *p = l->next;
+    node *p = l->next;//node struct is defined to input of function.
     while (p!=NULL){
-      printf("%d, ",p->data);
-      p=p->next;
+      printf("%d, ",p->data);//prints int variable "data" of node struct.
+      p=p->next;//p points to next input of function, which is printed 
     }
-    printf("\n");
+    printf("\n");//adds a new line after values of list are printed.
 }
 
 int largest(node *l){
     /*Excercise 3e) Add your code below.
       pre: head points to the first, empty element. The last element's next is NULL. size(l>0)
       post: returns the largest value of the list*/
-      node *p =l->next;
-      int largest= p->data;
-      for(int i;p->next!=NULL;i++)
+      node *p =l->next;//node struct is defined to input of function
+      int largest= p->data; //variable which finds largest int number of list is defined to first number of list.
+      for(int i;p->next!=NULL;i++)//checks numbers in elements, until element=NULL, when the last elements next is NULL.
       {
 
-      if(largest<p->data)
+      if(largest<p->data) //is number in list is greater than largest variable largest gets redefined to number in list.
       {
-        largest=p->data;
+        largest=p->data;//largest gets redefined to number in list.
       }
 
-      p = p->next;
+      p = p->next;//points to next element, which is checked in loop.
 }
     return largest; 
 }
