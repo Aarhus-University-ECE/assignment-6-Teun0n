@@ -60,6 +60,7 @@ int largest(node *l){
       node *p =l->next;//node struct is defined to input of function
       int largest= p->data; //variable which finds largest int number of list is defined to first number of list.
       for(int i;p->next!=NULL;i++)//checks numbers in elements, until element=NULL, when the last elements next is NULL.
+      
       {
 
       if(largest<p->data) //is number in list is greater than largest variable largest gets redefined to number in list.
